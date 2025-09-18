@@ -59,8 +59,10 @@ def get_valve_position(m_id: int) -> float:
 while True:
     cmd = input("Enter Command: ")
     send_message(cmd)
-    print(ser.read_until().decode())
+    print(ser.read_until())
+    print(ser.read_until())
+    #print(ser.read_until().decode())
 
-    print(get_plunger_position(1))
-    print(get_valve_position(1))
+    # print(get_plunger_position(1))
+    # print(get_valve_position(1))
     
