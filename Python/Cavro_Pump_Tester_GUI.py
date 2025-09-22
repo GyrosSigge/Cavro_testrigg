@@ -70,9 +70,9 @@ def find_cavro_port():
         if response.startswith("/0"):
             print(f"Cavro pump found on {port.device}")
             return port.device
-        else:
-            print(f"No Cavro pump found... Using fallback {SERIAL_PORT_CAVRO_FALLBACK}")
-            return SERIAL_PORT_CAVRO_FALLBACK
+
+    print(f"No Cavro pump found... Using fallback {SERIAL_PORT_CAVRO_FALLBACK}")
+    return SERIAL_PORT_CAVRO_FALLBACK
         
 ser_cavro = serial.Serial()
 ser_cavro.port = find_cavro_port()
